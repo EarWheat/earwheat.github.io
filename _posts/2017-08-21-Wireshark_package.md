@@ -60,17 +60,22 @@ Capture Length: 364 bytes (2912 bits)   | 捕获长度
 
 ### 2.数据链路层以太网帧头部信息
 
-字段 | 意义
----|---
-Ethernet II, Src: Giga-Byt_c8:4c:89(1c:6f:65:c8:4c:89),Dst: Tp-LinkT_f9:3c:c0 (6c:e8:73:f9:3c:c0)   | 
-Destination: Tp-LinkT_f9:3c:c0 (6c:e8:73:f9:3c:c0)  | 目的MAC地址
-Source: Giga-Byt_c8:4c:89 (1c:6f:65:c8:4c:89)  | 源MAC地址
-Type: IP (0x0800)  |
-### 3. 互联网层IP包头部信息 
 
 字段 | 意义
 ---|---
-Internet Protocol Version 4, Src: 192.168.0.104 (192.168.0.104), Dst: 61.182.140.146 (61.182.140.146)  | 
+Ethernet II, Src: Giga-Byt_c8:4c:89(1c:6f:65:c8:4c:89),Dst: Tp-LinkT_f9:3c:c0 (6c:e8:73:f9:3c:c0)  |
+Destination: Tp-LinkT_f9:3c:c0 (6c:e8:73:f9:3c:c0)  | 目的MAC地址
+Source: Giga-Byt_c8:4c:89 (1c:6f:65:c8:4c:89)  | 源MAC地址
+Type: IP (0x0800)  |
+
+
+### 3. 互联网层IP包头部信息 
+
+
+
+字段 | 意义
+---|---
+Internet Protocol Version 4, Src: 192.168.0.104 (192.168.0.104), Dst: 61.182.140.146 (61.182.140.146)  |
 Version: 4   | 互联网协议IPv4
 Header length: 20 bytes   | IP包头部长度
 Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00: Not-ECT (Not ECN-Capable Transport))    | 差分服务字段
