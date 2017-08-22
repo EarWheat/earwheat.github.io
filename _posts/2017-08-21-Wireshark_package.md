@@ -71,6 +71,7 @@ Type: IP (0x0800)  |
 
 #### 3.互联网层IP包头部信息 
 
+
 字段 | 意义
 ---|---
 Internet Protocol Version 4, Src: 192.168.0.104 (192.168.0.104), Dst: 61.182.140.146 (61.182.140.146)  |
@@ -86,6 +87,8 @@ Protocol: TCP (6)   | 此包内封装的上层协议为TCP
 Header checksum: 0x52ec [validation disabled]  | 头部数据的校验和
 Source: 192.168.0.104 (192.168.0.104)   | 源IP地址
 Destination: 61.182.140.146 (61.182.140.146)   | 目标IP地址
+
+
 #### 4.传输层TCP数据段头部信息
 
 字段 | 意义
