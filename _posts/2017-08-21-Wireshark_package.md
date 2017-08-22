@@ -63,7 +63,6 @@ Ethernet II, Src: Giga-Byt_c8:4c:89(1c:6f:65:c8:4c:89),Dst: Tp-LinkT_f9:3c:c0 (6
 Destination: Tp-LinkT_f9:3c:c0 (6c:e8:73:f9:3c:c0) | 目的MAC地址
 Source: Giga-Byt_c8:4c:89 (1c:6f:65:c8:4c:89) | 源MAC地址
 Type: IP (0x0800) |
-
 ### 3. 互联网层IP包头部信息 
 
 字段 | 意义
@@ -75,12 +74,12 @@ Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00: Not-ECT (Not
 Total Length: 254 | IP包的总长度
 Identification: 0x5bb5 (23477) | 标志字段
 Flags: 0x02 (Don't Fragment) | 标记字段
-Fragment offset: 0                                                              | 分的偏移量
-Time to live: 64       | 生存期TTL
+Fragment offset: 0 | 分的偏移量
+Time to live: 64 | 生存期TTL
 Protocol: TCP (6) | 此包内封装的上层协议为TCP
 Header checksum: 0x52ec [validation disabled]                                               | 头部数据的校验和
-Source: 192.168.0.104 (192.168.0.104)                                                   | 源IP地址
-Destination: 61.182.140.146 (61.182.140.146)                                       | 目标IP地址
+Source: 192.168.0.104 (192.168.0.104) | 源IP地址
+Destination: 61.182.140.146 (61.182.140.146) | 目标IP地址
 ### 4. 传输层TCP数据段头部信息
 
 字段 | 意义
