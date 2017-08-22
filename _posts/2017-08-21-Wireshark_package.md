@@ -16,10 +16,10 @@ tag: 计算网络
 
 此篇博客针对分析网络流量捕获的数据包，Wireshark的下载安装请自行百度。
 
-## 1.抓包
+### 1.抓包
 选择一个接口准备开始抓取数据包，如下图：
 ![image](http://img.blog.csdn.net/20170821172010377?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbDU1NDcyNTcyMg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-## 2.数据包详解
+### 2.数据包详解
  在Wireshark中关于数据包的叫法有三个术语，分别是帧、包、段。下面通过分析一个数据包，来介绍这三个术语。在Wireshark中捕获的一个数据包，如图：
  ![image](http://img.blog.csdn.net/20150716143332537?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
  接下来咱们看一个HTTP的数据包来进一步认识分析数据包。
@@ -34,8 +34,8 @@ tag: 计算网络
 -  Hypertext Transfer Protocol：应用层的信息，此处是HTTP协议。
 
 另附上一层OSI七层模型与TCP/IP协议的五层模型对比图便于理解。![image](http://www.ha97.com/wp-content/uploads/image/2010/09/162558wtA.jpg)![image](http://www.ha97.com/wp-content/uploads/image/2010/09/162603uh3.gif)
-## 各层次模型详解
-### 1.物理层数据帧概况
+### 3.各层次模型详解
+#### 1.物理层数据帧概况
 
 
 字段 | 意义
@@ -58,7 +58,7 @@ Capture Length: 364 bytes (2912 bits)   | 捕获长度
 [Coloring Rule Name: HTTP]   | 着色标记的协议名称
 [Coloring Rule String: http......]   | 着色规则显示的字符串
 
-### 2.数据链路层以太网帧头部信息
+#### 2.数据链路层以太网帧头部信息
 
 
 字段 | 意义
@@ -69,9 +69,7 @@ Source: Giga-Byt_c8:4c:89 (1c:6f:65:c8:4c:89)  | 源MAC地址
 Type: IP (0x0800)  |
 
 
-### 3. 互联网层IP包头部信息 
-
-
+#### 3.互联网层IP包头部信息 
 
 字段 | 意义
 ---|---
@@ -85,10 +83,10 @@ Flags: 0x02 (Don't Fragment)   | 标记字段
 Fragment offset: 0   | 分的偏移量
 Time to live: 64    | 生存期TTL
 Protocol: TCP (6)   | 此包内封装的上层协议为TCP
-Header checksum: 0x52ec [validation disabled]                                               | 头部数据的校验和
+Header checksum: 0x52ec [validation disabled]  | 头部数据的校验和
 Source: 192.168.0.104 (192.168.0.104)   | 源IP地址
 Destination: 61.182.140.146 (61.182.140.146)   | 目标IP地址
-### 4. 传输层TCP数据段头部信息
+#### 4.传输层TCP数据段头部信息
 
 字段 | 意义
 ---|---
