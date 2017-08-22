@@ -32,54 +32,57 @@ tag: 计算网络
 -  Internet Protocol Version 4：互联网层IP包头部信息。
 -  Transmission Control Protocol：传输层的数据段头部信息，此处是TCP协议。
 -  Hypertext Transfer Protocol：应用层的信息，此处是HTTP协议。
+
 另附上一层OSI七层模型与TCP/IP协议的五层模型对比图便于理解。![image](http://www.ha97.com/wp-content/uploads/image/2010/09/162558wtA.jpg)![image](http://www.ha97.com/wp-content/uploads/image/2010/09/162603uh3.gif)
 ## 各层次模型详解
 ### 1.物理层数据帧概况
 
-物理层字段 | 数据意义
+
+字段 | 意义
 ---|---
-Frame 190: 364 bytes on wire (2912 bits), 364 bytes captured (2912 bits) on interface 0 | 190号帧，2912个字，364字节，实际捕获364字节（2912bits）
-Interface id ：0 (any） | 接口的id号
-Encapsulation type： Linux cooked-mode capture (25) | 封装类型
-Arrival Time Aug 22, 2017 22:07:42.167911635 CST | 捕获时间
-[Time shift for this packet: 0.000000000 seconds] |
-Epoch Time: 1503410862.167911635 seconds | 
-[Time delta from previous captured frame: 0.000097773 seconds] | 此包与前一包的时间间隔
-[Time delta from previous displayed frame: 0.000000000 seconds] | 此包与前一显示帧的时间间隔
-[Time since reference or first frame: 13.524021107 seconds] | 此包与第一帧的时间间隔
-Frame Number: 190 | 帧序号
-Frame Length: 364 bytes (2912 bits) | 帧长度
-Capture Length: 364 bytes (2912 bits) | 捕获长度
-[Frame is marked: False] | 此帧是否做了标记：否
-[Frame is ignored: False] | 此帧是否被忽略：否
-[Protocols in frame: sll:ethertype:ip:tcp:http] | 帧内封装的协议层次结构
-[Coloring Rule Name: HTTP] | 着色标记的协议名称
-[Coloring Rule String: http......] | 着色规则显示的字符串
+Frame 190: 364 bytes on wire (2912 bits), 364 bytes captured (2912 bits) on interface 0   | 190号帧，2912个字，364字节，实际捕获364字节（2912bits）
+Interface id ：0 (any）   | 接口的id号
+Encapsulation type： Linux cooked-mode capture (25)   | 封装类型
+Arrival Time Aug 22, 2017 22:07:42.167911635 CST   | 捕获时间
+[Time shift for this packet: 0.000000000 seconds]   |
+Epoch Time: 1503410862.167911635 seconds   | 
+[Time delta from previous captured frame: 0.000097773 seconds]   | 此包与前一包的时间间隔
+[Time delta from previous displayed frame: 0.000000000 seconds]   | 此包与前一显示帧的时间间隔
+[Time since reference or first frame: 13.524021107 seconds]   | 此包与第一帧的时间间隔
+Frame Number: 190   | 帧序号
+Frame Length: 364 bytes (2912 bits)   | 帧长度
+Capture Length: 364 bytes (2912 bits)   | 捕获长度
+[Frame is marked: False]   | 此帧是否做了标记：否
+[Frame is ignored: False]  | 此帧是否被忽略：否
+[Protocols in frame: sll:ethertype:ip:tcp:http]   | 帧内封装的协议层次结构
+[Coloring Rule Name: HTTP]   | 着色标记的协议名称
+[Coloring Rule String: http......]   | 着色规则显示的字符串
+
 ### 2.数据链路层以太网帧头部信息
 
 字段 | 意义
 ---|---
-Ethernet II, Src: Giga-Byt_c8:4c:89(1c:6f:65:c8:4c:89),Dst: Tp-LinkT_f9:3c:c0 (6c:e8:73:f9:3c:c0) | 
-Destination: Tp-LinkT_f9:3c:c0 (6c:e8:73:f9:3c:c0) | 目的MAC地址
-Source: Giga-Byt_c8:4c:89 (1c:6f:65:c8:4c:89) | 源MAC地址
-Type: IP (0x0800) |
+Ethernet II, Src: Giga-Byt_c8:4c:89(1c:6f:65:c8:4c:89),Dst: Tp-LinkT_f9:3c:c0 (6c:e8:73:f9:3c:c0)   | 
+Destination: Tp-LinkT_f9:3c:c0 (6c:e8:73:f9:3c:c0)  | 目的MAC地址
+Source: Giga-Byt_c8:4c:89 (1c:6f:65:c8:4c:89)  | 源MAC地址
+Type: IP (0x0800)  |
 ### 3. 互联网层IP包头部信息 
 
 字段 | 意义
 ---|---
-Internet Protocol Version 4, Src: 192.168.0.104 (192.168.0.104), Dst: 61.182.140.146 (61.182.140.146)| 
-Version: 4 | 互联网协议IPv4
-Header length: 20 bytes | IP包头部长度
-Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00: Not-ECT (Not ECN-Capable Transport)) | 差分服务字段
-Total Length: 254 | IP包的总长度
-Identification: 0x5bb5 (23477) | 标志字段
-Flags: 0x02 (Don't Fragment) | 标记字段
-Fragment offset: 0 | 分的偏移量
-Time to live: 64 | 生存期TTL
-Protocol: TCP (6) | 此包内封装的上层协议为TCP
+Internet Protocol Version 4, Src: 192.168.0.104 (192.168.0.104), Dst: 61.182.140.146 (61.182.140.146)  | 
+Version: 4   | 互联网协议IPv4
+Header length: 20 bytes   | IP包头部长度
+Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00: Not-ECT (Not ECN-Capable Transport))    | 差分服务字段
+Total Length: 254   | IP包的总长度
+Identification: 0x5bb5 (23477)   | 标志字段
+Flags: 0x02 (Don't Fragment)   | 标记字段
+Fragment offset: 0   | 分的偏移量
+Time to live: 64    | 生存期TTL
+Protocol: TCP (6)   | 此包内封装的上层协议为TCP
 Header checksum: 0x52ec [validation disabled]                                               | 头部数据的校验和
-Source: 192.168.0.104 (192.168.0.104) | 源IP地址
-Destination: 61.182.140.146 (61.182.140.146) | 目标IP地址
+Source: 192.168.0.104 (192.168.0.104)   | 源IP地址
+Destination: 61.182.140.146 (61.182.140.146)   | 目标IP地址
 ### 4. 传输层TCP数据段头部信息
 
 字段 | 意义
