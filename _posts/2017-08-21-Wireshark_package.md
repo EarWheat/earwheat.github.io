@@ -32,9 +32,13 @@ tag: 计算网络
 -  Internet Protocol Version 4：互联网层IP包头部信息。
 -  Transmission Control Protocol：传输层的数据段头部信息，此处是TCP协议。
 -  Hypertext Transfer Protocol：应用层的信息，此处是HTTP协议。
+
 另附上一层OSI七层模型与TCP/IP协议的五层模型对比图便于理解。![image](http://www.ha97.com/wp-content/uploads/image/2010/09/162558wtA.jpg)![image](http://www.ha97.com/wp-content/uploads/image/2010/09/162603uh3.gif)
+
 ## 各层次模型详解
+
 ### 1.物理层数据帧概况
+
 
 物理层字段 | 数据意义
 ---|---
@@ -55,6 +59,8 @@ Capture Length: 364 bytes (2912 bits) | 捕获长度
 [Protocols in frame: sll:ethertype:ip:tcp:http] | 帧内封装的协议层次结构
 [Coloring Rule Name: HTTP] | 着色标记的协议名称
 [Coloring Rule String: http......] | 着色规则显示的字符串
+
+
 ### 2.数据链路层以太网帧头部信息
 
 字段 | 意义
@@ -63,6 +69,8 @@ Ethernet II, Src: Giga-Byt_c8:4c:89(1c:6f:65:c8:4c:89),Dst: Tp-LinkT_f9:3c:c0 (6
 Destination: Tp-LinkT_f9:3c:c0 (6c:e8:73:f9:3c:c0) | 目的MAC地址
 Source: Giga-Byt_c8:4c:89 (1c:6f:65:c8:4c:89) | 源MAC地址
 Type: IP (0x0800) |
+
+
 ### 3. 互联网层IP包头部信息 
 
 字段 | 意义
@@ -80,6 +88,8 @@ Protocol: TCP (6) | 此包内封装的上层协议为TCP
 Header checksum: 0x52ec [validation disabled]                                               | 头部数据的校验和
 Source: 192.168.0.104 (192.168.0.104) | 源IP地址
 Destination: 61.182.140.146 (61.182.140.146) | 目标IP地址
+
+
 ### 4. 传输层TCP数据段头部信息
 
 字段 | 意义
