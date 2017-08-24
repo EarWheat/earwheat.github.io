@@ -6,7 +6,7 @@ tag: nginx
 ---
 
 
-# Linux下编译安装nginx到指定目录
+## Linux下编译安装nginx到指定目录
 
 ---
 因工作需要在服务器搭建nginx，特此博客记录搭建过程。
@@ -21,7 +21,7 @@ nginx所需的依赖有
 - openssl
 
 
-## 1.下载编译pcre
+### 1.下载编译pcre
 
 去官网下载相关的.tar.gz包
 http://www.pcre.[org](http://www.pcre.org)。
@@ -53,7 +53,7 @@ make install
 ```
 
 
-## 2.下载编译zlib
+### 2.下载编译zlib
 
 步骤基本同上，第一步就是去官网下载[http://www.zlib.net](http://www.zlib.net)
 
@@ -79,12 +79,12 @@ make
 make install
 ```
 
-## 3.下载编译openssl
+### 3.下载编译openssl
 
 所有过程同上，不在赘述。
 
 
-## 4.安装nginx
+### 4.安装nginx
 
 终于到了重点nginx了，其实nginx的编译安装与前面的方法基本一样，不同的是编译的时候需要配置上nginx的依赖。
 
@@ -125,7 +125,7 @@ make
 make install
 ```
 
-## 4.启动nginx
+### 4.启动nginx
 
 进入安装完后的nginx目录
 
