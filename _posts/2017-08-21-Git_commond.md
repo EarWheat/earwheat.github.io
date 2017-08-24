@@ -16,7 +16,7 @@ sudo apt-get install git
    在Git工作之前，为了能够跟踪到是谁对这段代码进行了修改，需要做一个配置信息，主要是用户名和邮箱，如下：
 ```
 git config --global user.name "your_username"  
-git config --global user.email your_email@domain.com  
+git config --global user.email "your_email@domain.com"  
 ```
 ## 4.添加文件交于Git管理
    当我们配置完信息之后，需要初始化Git工作区并将我们的文件交于Git来管理，命令为：
