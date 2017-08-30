@@ -5,12 +5,12 @@ date: 2017-08-30
 tag: nginx
 ---
 
-# nginx location匹配规则
+## nginx location匹配规则
 
 
 工作需要负责配置管理nginx，现学现记，趁热打铁。文章内容非原创，转自[http://www.nginx.cn/115.html](http://www.nginx.cn/115.html)
 
-## location匹配命令
+### location匹配命令
 
 
 - ~      #波浪线表示执行一个正则匹配，区分大小写
@@ -20,7 +20,7 @@ tag: nginx
 - @     #"@" 定义一个命名的 location，使用在内部定向时，例如 error_page, try_files
 
 
-## location 匹配的优先级(与location在配置文件中的顺序无关)
+### location 匹配的优先级(与location在配置文件中的顺序无关)
 
 - = 精确匹配会第一个被处理。如果发现精确匹配，nginx停止搜索其他匹配。
 - 普通字符匹配，正则表达式规则和长的块规则将被优先和查询匹配，也就是说如果该项匹配还需去看有没有正则表达式匹配和更长的匹配。
@@ -61,8 +61,10 @@ location ~* .(gif|jpg|jpeg)$ {
     /documents/1.jpg ->符合 configuration D
 
 @location 例子
+````
 error_page 404 = @fetch;
 
 location @fetch(
-proxy_pass http://fetch;
+    proxy_pass http://fetch;
 )
+````
