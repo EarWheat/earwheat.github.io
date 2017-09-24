@@ -69,7 +69,9 @@ Spark生态圈以Spark Core为核心，从HDFS、Amazon S3和HBase等持久层�
 Spark Streaming是一个对实时数据流进行高通量、容错处理的流式处理系统，可以对多种数据源（如Kdfka、Flume、Twitter、Zero和TCP 套接字）进行类似Map、Reduce和Join等复杂操作，并将结果保存到外部文件系统、数据库或应用到实时仪表盘。
 Spark Streaming是将流式计算分解成一系列短小的批处理作业。这里的批处理引擎是Spark Core，也就是把Spark Streaming的输入数据按照batch size（如1秒）分成一段一段的数据（Discretized Stream），每一段数据都转换成Spark中的RDD（Resilient Distributed Dataset），然后将Spark Streaming中对DStream的Transformation操作变为针对Spark中对RDD的Transformation操作，将RDD经过操作变成中间结果保存在内存中。整个流式计算根据业务的需求可以对中间的结果进行叠加或者存储到外部设备。下图显示了Spark Streaming的整个流程。
 
+
 ![image](http://images0.cnblogs.com/blog/107289/201508/032218395172222.jpg)
+
 
 - 3.3 Spark SQL
     Shark是SparkSQL的前身，它发布于3年前，那个时候Hive可以说是SQL on Hadoop的唯一选择，负责将SQL编译成可扩展的MapReduce作业，鉴于Hive的性能以及与Spark的兼容，Shark项目由此而生。
@@ -77,7 +79,9 @@ Spark Streaming是将流式计算分解成一系列短小的批处理作业。�
 Shark即Hive on Spark，本质上是通过Hive的HQL解析，把HQL翻译成Spark上的RDD操作，然后通过Hive的metadata获取数据库里的表信息，实际HDFS上的数据和文件，会由Shark获取并放到Spark上运算。Shark的最大特性就是快和与Hive的完全兼容，且可以在shell模式下使用rdd2sql()这样的API，把HQL得到的结果集，继续在scala环境下运算，支持自己编写简单的机器学习或简单分析处理函数，对HQL结果进一步分析计算。
 Spark SQL允许开发人员直接处理RDD，同时也可查询例如在 Apache Hive上存在的外部数据。Spark SQL的一个重要特点是其能够统一处理关系表和RDD，使得开发人员可以轻松地使用SQL命令进行外部查询，同时进行更复杂的数据分析。除了Spark SQL外，Michael还谈到Catalyst优化框架，它允许Spark SQL自动修改查询方案，使SQL更有效地执行。
 
+
 ![image](http://images0.cnblogs.com/blog/107289/201508/032218485482429.jpg)
+
 
 - 3.4 SparkR
 SparkR是AMPLab发布的一个R开发包，使得R摆脱单机运行的命运，可以作为Spark的job运行在集群上，极大得扩展了R的数据处理能力。
@@ -87,4 +91,6 @@ SparkR的几个特性：
 2. 支持序化闭包功能，可以将用户定义函数中所引用到的变量自动序化发送到集群中其他的机器上。
 3.  SparkR还可以很容易地调用R开发包，只需要在集群上执行操作前用includePackage读取R开发包就可以了，当然集群上要安装R开发包。
 
+
 ![image](http://images0.cnblogs.com/blog/107289/201508/032219059708673.jpg)
+
