@@ -5,7 +5,7 @@ date: 2017-09-14
 tag: spark
 ---
 
-## Spark之初识Spark
+## Spark之认识Spark
 
 
 ---
@@ -57,6 +57,7 @@ Spark生态圈以Spark Core为核心，从HDFS、Amazon S3和HBase等持久层�
 
 ![image](http://images0.cnblogs.com/blog/107289/201508/032218378456765.jpg)
 
+
 - 3.1 Spark Core
 - - 提供了有向无环图（DAG）的分布式并行计算框架，并提供Cache机制来支持多次迭代计算或者数据共享，大大减少迭代计算之间读取数据局的开销，这对于需要进行多次迭代的数据挖掘和分析性能有很大提升
 -  - 在Spark中引入了RDD (Resilient Distributed Dataset) 的抽象，它是分布在一组节点中的只读对象集合，这些集合是弹性的，如果数据集一部分丢失，则可以根据“血统”对它们进行重建，保证了数据的高容错性；
@@ -66,7 +67,7 @@ Spark生态圈以Spark Core为核心，从HDFS、Amazon S3和HBase等持久层�
 
 - 3.2 Spark Streaming
 
-Spark Streaming是一个对实时数据流进行高通量、容错处理的流式处理系统，可以对多种数据源（如Kdfka、Flume、Twitter、Zero和TCP 套接字）进行类似Map、Reduce和Join等复杂操作，并将结果保存到外部文件系统、数据库或应用到实时仪表盘。
+SparkStreaming是一个对实时数据流进行高通量、容错处理的流式处理系统，可以对多种数据源（如Kdfka、Flume、Twitter、Zero和TCP 套接字）进行类似Map、Reduce和Join等复杂操作，并将结果保存到外部文件系统、数据库或应用到实时仪表盘。
 Spark Streaming是将流式计算分解成一系列短小的批处理作业。这里的批处理引擎是Spark Core，也就是把Spark Streaming的输入数据按照batch size（如1秒）分成一段一段的数据（Discretized Stream），每一段数据都转换成Spark中的RDD（Resilient Distributed Dataset），然后将Spark Streaming中对DStream的Transformation操作变为针对Spark中对RDD的Transformation操作，将RDD经过操作变成中间结果保存在内存中。整个流式计算根据业务的需求可以对中间的结果进行叠加或者存储到外部设备。下图显示了Spark Streaming的整个流程。
 
 ![image](http://images0.cnblogs.com/blog/107289/201508/032218395172222.jpg)
@@ -87,6 +88,4 @@ SparkR的几个特性：
 2. 支持序化闭包功能，可以将用户定义函数中所引用到的变量自动序化发送到集群中其他的机器上。
 3.  SparkR还可以很容易地调用R开发包，只需要在集群上执行操作前用includePackage读取R开发包就可以了，当然集群上要安装R开发包。
 
-![image](http://images0.cnblogs.com/blog/107289/201508/032219059708673.jpg)
-
-
+![![image](http://images0.cnblogs.com/blog/107289/201508/032219059708673.jpg)
