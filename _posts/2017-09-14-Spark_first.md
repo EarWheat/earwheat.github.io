@@ -5,7 +5,6 @@ date: 2017-09-14
 tag: spark
 ---
 
-
 毕业论文需要，外加为了以后更好的工作，也为了自己学习更多的知识，挖了一个Spark的坑。现在开始填坑。
 ---
 
@@ -51,9 +50,8 @@ Spark生态圈也称为BDAS（伯克利数据分析栈），是伯克利APMLab�
 Spark生态圈以Spark Core为核心，从HDFS、Amazon S3和HBase等持久层读取数据，以MESS、YARN和自身携带的Standalone为资源管理器调度Job完成Spark应用程序的计算。 这些应用程序可以来自于不同的组件，如Spark Shell/Spark Submit的批处理、Spark Streaming的实时处理应用、Spark SQL的即席查询、BlinkDB的权衡查询、MLlib/MLbase的机器学习、GraphX的图处理和SparkR的数学计算等等。
 
 
-  ![img](http://images0.cnblogs.com/blog/107289/201508/032218378456765.jpg)
+![img](http://images0.cnblogs.com/blog/107289/201508/032218378456765.jpg)
  
-
 
 - 3.1 Spark Core
 - - 提供了有向无环图（DAG）的分布式并行计算框架，并提供Cache机制来支持多次迭代计算或者数据共享，大大减少迭代计算之间读取数据局的开销，这对于需要进行多次迭代的数据挖掘和分析性能有很大提升
