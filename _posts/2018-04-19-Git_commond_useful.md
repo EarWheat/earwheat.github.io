@@ -21,7 +21,7 @@ git init
 初始化本地git之后，就要将本地与远程git仓库相关联，前提是远程仓库要存在，使用下面命令关联远程仓库（项目）
 
 ```
-git add remote origin 'git项目地址'
+git remote add origin 'git项目地址'
 ```
 ## 3.获取项目分支
 因为大多数情况下，我们是不操作master分支的，所以我们要获取／创建分支。
