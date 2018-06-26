@@ -1,7 +1,7 @@
 ---
 layout: post
 title: nginx配置反向代理，实现Restful
-date: 2018-04-19 
+date: 2018-05-29 
 tag: nginx
 ---
 
