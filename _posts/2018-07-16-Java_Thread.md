@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java_Thread
+title: Java多线程
 date: 2018-07-16 
 tag: Java
 ---
