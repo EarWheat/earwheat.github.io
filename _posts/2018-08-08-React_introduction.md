@@ -2,7 +2,7 @@
 layout: post
 title: React自学笔记（1）——入门
 date: 2018-08-08 
-tag: React
+tag: 前端
 ---
 
 # React自学笔记（1）——入门

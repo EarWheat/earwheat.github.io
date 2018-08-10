@@ -2,7 +2,7 @@
 layout: post
 title: K-means聚类算法Python实现
 date: 2017-09-11
-tag: machineLearning
+tag: 机器学习
 ---
 
 

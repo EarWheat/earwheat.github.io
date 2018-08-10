@@ -2,7 +2,7 @@
 layout: post
 title: Ant Design Pro自学笔记（1）—入门
 date: 2018-07-21 
-tag: Ant Design
+tag: 前端
 ---
 
 # Ant Design Pro自学笔记（1）—入门

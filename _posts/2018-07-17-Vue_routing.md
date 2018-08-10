@@ -2,7 +2,7 @@
 layout: post
 title: Vue自学笔记（2）—路由
 date: 2018-07-17 
-tag: Vue
+tag: 前端
 ---
 
 # Vue.js自学笔记（2）—路由

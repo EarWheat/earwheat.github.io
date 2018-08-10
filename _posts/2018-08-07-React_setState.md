@@ -2,7 +2,7 @@
 layout: post
 title: React自学笔记——记一个setState的坑
 date: 2018-08-07 
-tag: React
+tag: 前端
 ---
 
 # React自学笔记——记一个setState的坑

@@ -2,7 +2,7 @@
 layout: post
 title: Spark之初识Spark
 date: 2017-09-14
-tag: spark
+tag: 机器学习
 ---
 
 毕业论文需要，外加为了以后更好的工作，也为了自己学习更多的知识，挖了一个Spark的坑。现在开始填坑。
