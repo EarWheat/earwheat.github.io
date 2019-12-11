@@ -65,7 +65,7 @@ tag: 机器学习
 ```
 #################################################
 # kmeans: k-means cluster
-# Author : Zeron Liu
+# Author : Zero Liu
 # Date   : 2017-09-11
 # HomePage : http://www.liuzhaolu.com
 #################################################

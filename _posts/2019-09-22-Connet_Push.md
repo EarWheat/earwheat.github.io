@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linux权限详解
+title: 短连接与长连接
 date: 2019-09-12 
 tag: 计算机网络
 ---
